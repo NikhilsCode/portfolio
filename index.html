@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Savant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+  <section class="navsection sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blur">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold " href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFFFFF" viewBox="0 0 256 256">
+            <path
+              d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z">
+            </path>
+          </svg>
+        </a>
+        <ul class="navbar-nav d-flex flex-row justify-content-center  mb-lg-0">
+          <li class="nav-item ml-1">
+            <a class="nav-link active me-2" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFFFFF" viewBox="0 0 256 256">
+                <path
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
+                </path>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item ml-1 ">
+            <a class="nav-link me-2" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFFFFF" viewBox="0 0 256 256">
+                <path
+                  d="M230.15,117.1,210.25,41a11.94,11.94,0,0,0-22.79-1.11L169.78,88H86.22L68.54,39.87A11.94,11.94,0,0,0,45.75,41L25.85,117.1a57.19,57.19,0,0,0,22,61l73.27,51.76a11.91,11.91,0,0,0,13.74,0l73.27-51.76A57.19,57.19,0,0,0,230.15,117.1ZM58,57.5,73.13,98.76A8,8,0,0,0,80.64,104h94.72a8,8,0,0,0,7.51-5.24L198,57.5l13.07,50L128,166.21,44.9,107.5ZM40.68,124.11,114.13,176,93.41,190.65,57.09,165A41.06,41.06,0,0,1,40.68,124.11Zm87.32,91-20.73-14.65L128,185.8l20.73,14.64ZM198.91,165l-36.32,25.66L141.87,176l73.45-51.9A41.06,41.06,0,0,1,198.91,165Z">
+                </path>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item ml-1">
+            <a class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFFFFF" viewBox="0 0 256 256">
+                <path
+                  d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z">
+                </path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <section class="heroSection d-flex flex-column  full-vh">
+    <canvas id="dustCanvas" style="z-index: 0;"></canvas>
+    <div class="full-vh d-flex flex-column">
+      <h1 class="text-center  herotitle">Nikhil Savant </h1>
+      <h2 class=" mt-5 text-center subtitleFont p-2 neutralFonts ">Software Developer</h2>
+      <p class="text-center subtitleFont p-2">"Turning ‘it works on my machine’ into ‘it works everywhere.’".</p>
+      <div class="marquee-container mt-auto container mb-lg-2 mb-5">
+        <div class="marque-gradiant"></div>
+        <div class="marquee-content">
+          <span class="marqueeText">JavaScript</span>
+          <span class="marqueeText">Html / CSS / SCSS</span>
+          <span class="marqueeText">React JS</span>
+          <span class="marqueeText">Vue Js</span>
+          <span class="marqueeText">Node Js</span>
+          <span class="marqueeText">Express</span>
+          <span class="marqueeText">Java</span>
+          <span class="marqueeText">SpringBoot</span>
+          <span class="marqueeText">MongoDB</span>
+          <span class="marqueeText">MySQL</span>
+          <span class="marqueeText">Git</span>
+          <span class="marqueeText">PWA</span>
+          <span class="marqueeText">Webworker</span>
+          <span class="marqueeText">Sockey.io</span>
+          <span class="marqueeText">WeBRTC</span>
+          <span class="marqueeText">AWS</span>
+          <span class="marqueeText">Docker</span>
+          <span class="marqueeText">Bash Script</span>
+          <span class="marqueeText" aria-hidden="true">JavaScript</span>
+          <span class="marqueeText" aria-hidden="true">Html / CSS / SCSS</span>
+          <span class="marqueeText" aria-hidden="true">React JS</span>
+          <span class="marqueeText" aria-hidden="true">Vue Js</span>
+          <span class="marqueeText" aria-hidden="true">Node Js</span>
+          <span class="marqueeText" aria-hidden="true">Express</span>
+          <span class="marqueeText" aria-hidden="true">Java</span>
+          <span class="marqueeText" aria-hidden="true">SpringBoot</span>
+          <span class="marqueeText" aria-hidden="true">MongoDB</span>
+          <span class="marqueeText" aria-hidden="true">MySQL</span>
+          <span class="marqueeText" aria-hidden="true">Git</span>
+          <span class="marqueeText" aria-hidden="true">PWA</span>
+          <span class="marqueeText" aria-hidden="true">Webworker</span>
+          <span class="marqueeText" aria-hidden="true">Sockey.io</span>
+          <span class="marqueeText" aria-hidden="true">WeBRTC</span>
+          <span class="marqueeText" aria-hidden="true">AWS</span>
+          <span class="marqueeText" aria-hidden="true">Docker</span>
+          <span class="marqueeText" aria-hidden="true">Bash Script</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary-details flex-col-wise w-100 full-vh">
+    <section class="container full-vh row ">
+      <div class="displaycontentdiv col-lg-6 col-12  d-flex flex-column  justify-content-center">
+        <h1 id="tiitleWord" class="titleFont">Nikhil Savant</h1>
+        <p id="subtitleWord" class="subtitleFont">Software Developer</p>
+        <div class="normalFont mt-2">
+          <div id="paragraphLines" class="normalFont text-justify">
+            I am a passionate Software Developer with a strong foundation in software engineering. Skilled in
+            Java, C++, JavaScript, TypeScript, and frameworks like Vue.js, React, and Node.js, I excel at
+            solving complex problems and building scalable solutions. I have hands-on experience with RESTful
+            APIs, microservices,
+            and databases such as MySQL, PostgreSQL, and MongoDB. Additionally, I am proficient in version
+            control
+            (Git), cloud platforms (AWS), and containerization (Docker). Driven by curiosity and a commitment to
+            quality, I focus on writing clean, maintainable code and collaborating effectively to create
+            user-centric
+            applications.
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-6 col-12 my-0 mt-md-5">
+        <section class="container center_Div">
+          <div class="circleContainer">
+            <div id="center_circle">
+              <div id="title">
+                <div class="typewriter">
+                  <p id="heading" class="headingFont">Nikhil Savant</p>
+                </div>
+              </div>
+              <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+              </div>
+              <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                </svg>
+              </div>
+              <div class="circle"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                </svg>
+              </div>
+              <div class="circle"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>
+              </div>
+              <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                </svg>
+              </div>
+              <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.0" stroke="#e1e1e1" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+              </div>
+
+
+
+            </div>
+            <div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </section>
+
+  <section class="projects flex-col-wise  full-vh">
+    <div class="container flex-col-wise ">
+      <div class=" projectContainer  row  g-3">
+        <div class="col-lg-12 col-12 ">
+          <span class="titleFont mx-2 ">Projects</span>
+        </div>
+        <div class="projectItem col-lg-8  col-12">
+          <div class="card">
+            <h1>1</h1>
+            <div class="project-item-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32Z"></path></svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="  projectItem col-lg-4 col-6 ">
+          <div class="card">
+            <h1>2</h1>
+            <div class="project-item-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32Z"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div class="  projectItem col-lg-4 col-6  ">
+          <div class="card">
+            <h1>3</h1>
+            <div class="project-item-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32Z"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div class=" projectItem col-lg-4 col-6 ">
+          <div class="card">
+            <h1>4</h1>
+            <div class="project-item-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32Z"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div class=" projectItem col-lg-4 col-6 ">
+          <div class="card">
+            <h1>5</h1>
+            <div class="project-item-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm45.66-93.66a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32Z"></path></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="experienceSection flex-col-wise full-vh mt-5">
+    <div class="container d-flex flex-column justify-content-center mt-5">
+      <div class="">
+        <h1 class="titleFont text-left mt-5 ">Work Experience</h1>
+      </div>
+      <div class="experience ">
+        <div class="experienceCard row">
+          <div class="col-lg-3 col-12">
+            <p class="subtitleFont">01.</p>
+            <p class="subtitleFont">Eroam Private Limited</p>
+          </div>
+          <div class="col-lg-9 col-12">
+            <p class="collapsible normalFont pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              quas veritatis
+              quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+              eligendi vitae ad ullam est exe</p>
+            <div class="content  normalFont">
+              <p>Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas
+                veritatis
+                quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+                eligendi vitae ad ullam est exercitationem optio quo alias. Iusto.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quam minus consequuntur maxime assumenda laboriosam. At minus nostrum excepturi nemo.
+                Officiis iste excepturi totam.onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+
+            <p class="normalFont">Tech Stack : </p>
+            <div class="d-flex flex-row flex-wrap">
+              <span class="bubbleData normalFont mx-2 my-1">Html</span>
+              <span class="bubbleData normalFont mx-2 my-1">Css/Scss/Bootstrap</span>
+              <span class="bubbleData normalFont mx-2  my-1">Javascript</span>
+              <span class="bubbleData normalFont mx-2  my-1">Vue js</span>
+              <span class="bubbleData normalFont mx-2  my-1">React</span>
+              <span class="bubbleData normalFont mx-2  my-1">TypeScript</span>
+              <span class="bubbleData normalFont mx-2  my-1">Node Js</span>
+              <span class="bubbleData normalFont mx-2  my-1">Aws</span>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="experienceCard row mt-4">
+          <div class="col-lg-3 col-12">
+            <p class="subtitleFont">02.</p>
+            <p class="subtitleFont">FlexEHR Private Limited</p>
+          </div>
+          <div class="col-lg-9 col-12">
+            <p class="collapsible normalFont pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              quas veritatis
+              quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+              eligendi vitae ad ullam est exe</p>
+            <div class="content  normalFont">
+              <p>Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas
+                veritatis
+                quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+                eligendi vitae ad ullam est exercitationem optio quo alias. Iusto.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quam minus consequuntur maxime assumenda laboriosam. At minus nostrum excepturi nemo.
+                Officiis iste excepturi totam.onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+            <p class="normalFont">Tech Stack : </p>
+            <div class="d-flex flex-row flex-wrap">
+              <span class="bubbleData normalFont mx-2 my-1 ">Html</span>
+              <span class="bubbleData normalFont mx-2 my-1">Css/Scss/Bootstrap</span>
+              <span class="bubbleData normalFont mx-2 my-1">Javascript</span>
+              <span class="bubbleData normalFont mx-2 my-1">Vue js</span>
+              <span class="bubbleData normalFont mx-2 my-1">React</span>
+              <span class="bubbleData normalFont mx-2 my-1">TypeScript</span>
+              <span class="bubbleData normalFont mx-2 my-1">Node Js</span>
+              <span class="bubbleData normalFont mx-2 my-1">PWA | serivce worker | web Worker</span>
+              <span class="bubbleData normalFont mx-2 my-1">Aws</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="experienceCard row mt-4">
+          <div class="col-lg-3">
+            <p class="subtitleFont">03.</p>
+            <p class="subtitleFont">RFlabs</p>
+          </div>
+          <div class="col-lg-9 col-12">
+            <p class="collapsible normalFont pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              quas veritatis
+              quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+              eligendi vitae ad ullam est exe</p>
+            <div class="content  normalFont">
+              <p>Lorem ipsum dolor sit amet, cLorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas
+                veritatis
+                quia cupiditate officia cum doloribus iusto voluptatum ipsam dicta, asperiores corporis facere placeat
+                eligendi vitae ad ullam est exercitationem optio quo alias. Iusto.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quam minus consequuntur maxime assumenda laboriosam. At minus nostrum excepturi nemo.
+                Officiis iste excepturi totam.onsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+            <p class="normalFont">Tech Stack : </p>
+            <div class="d-flex flex-row flex-wrap">
+              <span class="bubbleData normalFont mx-2 my-1 ">Html</span>
+              <span class="bubbleData normalFont mx-2 my-1">Css/Scss/Bootstrap</span>
+              <span class="bubbleData normalFont mx-2 my-1">Javascript</span>
+              <span class="bubbleData normalFont mx-2 my-1">PHP</span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="skills  flex-col-wise full-vh mt-5">
+    <div class=" container ">
+      <div class=" ">
+        <h1 class="mt-5 titleFont text-left shadow">Skills</h1>
+      </div>
+      <div class=" row p-0 m-0">
+        <div class="skillsContainer  text-center col-lg-6 col-12 ">
+          <div class="row">
+            <div class="   col-lg-2 col-4 p-0 ">
+              <p class="skillpara"  data-content="Html">Html</p>
+            </div>
+            <div class="  col-lg-2 col-4 p-0">
+              <p class="  skillpara "  data-content="Css">Css</p>
+            </div>
+            <div class="   col-lg-2 col-4 p-0" >
+              <p class="  skillpara " data-content="Scss">Scss</p>
+            </div>
+            <div class=" col-lg-6 col-6 p-0">
+              <p class="  skillpara "  data-content="Javascript">Javascript</p>
+            </div>
+            <div class="  col-lg-4 col-6 p-0" >
+              <p class="  skillpara " data-content="React">React</p>
+            </div>
+            <div class=" col-lg-4 col-6 p-0" >
+              <p class="  skillpara "data-content="Vue">Vue</p>
+            </div>
+            <div class=" col-lg-4 col-6 p-0">
+              <p class="  skillpara "  data-content="PWA">PWA</p>
+            </div>
+            <div class=" col-lg-4 col-6  p-0">
+              <p class="  skillpara "  data-content="Webworker">Web-worker</p>
+            </div>
+            <div class=" col-lg-4 col-6  p-0">
+              <p class="  skillpara "  data-content="Webrtc">Webrtc</p>
+            </div>
+            <div class=" col-lg-4 col-6  p-0" >
+              <p class="  skillpara "data-content="Socket">Socket</p>
+            </div>
+            <div class=" col-lg-6 col-6  p-0" >
+              <p class="  skillpara " data-content="NodeJS">Node JS</p>
+            </div>
+            <div class=" col-lg-6 col-4 p-0">
+              <p class="  skillpara "  data-content="Expresss">Expresss</p>
+            </div>
+            <div class=" col-lg-6 col-4 p-0" >
+              <p class="  skillpara " data-content="Java">Java</p>
+            </div>
+            <div class=" col-lg-6 col-4 p-0">
+              <p class="  skillpara "  data-content="Spring">Spring</p>
+            </div>
+            <div class=" col-lg-5 col-6 p-0">
+              <p class="  skillpara "  data-content="SpringBoot">Spring Boot</p>
+            </div>
+            <div class=" col-lg-3 col-6 p-0" >
+              <p class="  skillpara " data-content="MongoDB">MongoDB</p>
+            </div>
+            <div class=" col-lg-4 col-4 p-0">
+              <p class="  skillpara "  data-content="MySQL">MySQL</p>
+            </div>
+            <div class=" col-lg-3 col-4 p-0" >
+              <p class="  skillpara " data-content="docker">docker</p>
+            </div>
+            <div class=" col-lg-3 col-4 p-0">
+              <p class="  skillpara "  data-content="Ngnix">Ngnix</p>
+            </div>
+            <div class=" col-lg-3 col-6 p-0" >
+              <p class="  skillpara " data-content="Bash">Bash</p>
+            </div>
+            <div class=" col-lg-3 col-6 p-0">
+              <p class="  skillpara "  data-content="Git">Git</p>
+            </div>
+            <div class=" col-lg-12 col-12 p-0">
+              <p class="  skillpara "  data-content="AWS">AWS</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="skillsDiscription col-lg-6 col-12 ">
+          <div class="main-content  active p-2  " id="mainContent">
+            <h3 class="">Html</h3>
+            
+            <p class="normalFont text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti reiciendis quo fuga.
+              Perspiciatis quibusdam, molestiae doloribus reprehenderit sunt quam in itaque laboriosam nulla ea ab
+              repellat, esse et ratione voluptas.</p>
+              <p class="normalFont text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti reiciendis quo fuga.
+                Perspiciatis quibusdam, molestiae doloribus reprehenderit sunt quam in itaque laboriosam nulla ea ab
+                repellat, esse et ratione voluptas.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="connect flex-col-wise full-vh mt-5">
+    <div class="container">
+      <div class="row d-flex align-items-between">
+        <div class="col-lg-6 col-12 connectMessage d-flex flex-column  ">
+          <div>
+            <span style="font-size: 140px;line-height: 140px;">L</span><span style="font-size:60px;">et's </span>
+              <br>
+              <span style="font-size: 140px;line-height: 140px;">C</span><span style="font-size:60px;">onnect</span>
+          </div>
+          <p class="">I'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Here's how you can connect with us</p>
+        </div>
+        <div class="col-lg-6 col-12"> 
+          <p class="titleFont mx-2 my-2">Message</p>
+          <div class="row gap-2 contactForm">
+            
+            <div class="contactForm col-12 ">
+              <input name="Name" id="Name" type="text" placeholder="Name">
+            </div>
+            <div class="col-12 ">
+              <input name="Email" id="Email" type="text" placeholder="Email">
+            </div>
+            <div class="col-12">
+              <input type="text" name="Subject" id="Subject" placeholder="Subject">
+            </div>
+            <div class="col-12">
+              <textarea name="Message"  placeholder="Message" id="Message"  rows="6" cols="50"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="button" id="">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="flex-row-wise">
+     <a href="">Nikhil Savant  </a>
+     <span> <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#a8a8a8" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Z"></path></svg> </span>
+     <a href="">  savantnikhil2002@gmail.com</a>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script src="hero.js"></script>
+  <script src="collapse.js"></script>
+  <script type="module" src="skills.js"></script>
+  <script src="stars.js"></script>
+  <script src="project.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
