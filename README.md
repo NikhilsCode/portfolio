@@ -1,4 +1,4 @@
-# Portfolio Website
+# Responsive Portfolio Website
 
 This is a portfolio website created using **JavaScript**, **HTML**, and **CSS**.
 
