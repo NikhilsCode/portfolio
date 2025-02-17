@@ -556,6 +556,18 @@ canvas {
   color: var(--text-theme-secondary)
 
 }
+.connectMessage button {
+  width: 284px;
+  font-size: 20px;
+  color: var(--text-theme-primary);
+  text-align: justify;
+  letter-spacing: 3px;
+  padding: 6px 17px;
+  border-radius: 5px;
+  border: var(--text-theme-primary) 1px solid;
+  background-color: transparent;
+
+}
 footer{
  
 }
